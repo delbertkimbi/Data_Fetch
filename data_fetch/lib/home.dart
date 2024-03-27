@@ -19,6 +19,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
+        centerTitle: true,
       ),
       body: BlocBuilder<UsersCubit, List<User>>(builder: (context, users) {
         if (users is UsersInitial || users is UsersLoading) {
